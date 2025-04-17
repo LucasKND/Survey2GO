@@ -693,10 +693,10 @@ function startOfferCountdown() {
 
 // Função para voltar para a tela anterior
 function goToPreviousScreen() {
-    if (currentScreen > 0) {
-        currentScreen--;
-        showQuestion(currentScreen);
-        updateProgressBar(currentScreen);
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion(currentQuestionIndex);
+        updateProgressBar(currentQuestionIndex);
     }
 }
 

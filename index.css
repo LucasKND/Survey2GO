@@ -403,12 +403,29 @@ textarea:focus {
 .back-button {
   background: none;
   border: none;
-  color: #777;
+  color: #555;
   cursor: pointer;
   font-size: 0.9rem;
-  padding: 0.5rem;
-  display: block;
-  margin: 1rem auto 0;
+  padding: 8px 15px;
+  display: inline-block;
+  align-items: center;
+  position: static; /* Alterado de 'fixed' para 'static' */
+  margin: 0 auto 20px; /* Adiciona margem abaixo e centraliza */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background-color: #f5f5f5;
+}
+
+.back-button:before {
+  content: "←";
+  margin-right: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  color: #333;
+  background-color: #e0e0e0;
 }
 
 footer {
@@ -1095,7 +1112,7 @@ footer {
 @media (max-width: 768px) {
   #welcome-screen {
     overflow: hidden;
-    max-height: 100vh;
+    max-height: none;
   }
   
   .additional-plans {
@@ -1126,29 +1143,37 @@ footer {
     margin-right: 0;
     margin-bottom: 1rem;
   }
+  
+  .ready-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 70px;
   }
 
   .container {
-    padding: 0 15px 30px;
+    padding: 0 12px 25px;
   }
 
   h2 {
     font-size: 1.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .offer-container h3, 
   .additional-offer-container h3,
   .summary-container h3 {
     font-size: 1.3rem;
+    margin-bottom: 1.2rem;
   }
 
   .progress-container {
-    top: 55px;
+    top: 50px;
+    height: 6px;
   }
 
   .rating-star {
@@ -1158,16 +1183,20 @@ footer {
 
   .bonus-section, .access-section {
     padding: 1rem;
+    margin: 1rem 0;
   }
 
   .offer-card {
     flex-direction: column;
     text-align: center;
+    padding: 1.2rem;
   }
 
   .offer-icon {
     margin-right: 0;
     margin-bottom: 1rem;
+    width: 70px;
+    height: 70px;
   }
 
   .offer-details {
@@ -1200,12 +1229,14 @@ footer {
   .additional-plans {
     flex-direction: column;
     gap: 15px;
+    margin: 1.5rem 0;
   }
 
   .testimonial-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1.2rem;
   }
 
   .testimonial-avatar {
@@ -1213,9 +1244,15 @@ footer {
     margin-bottom: 0.8rem;
   }
 
+  .testimonial-avatar img {
+    width: 50px;
+    height: 50px;
+  }
+
   .guarantee-section {
     flex-direction: column;
     text-align: center;
+    padding: 1.2rem;
   }
 
   .guarantee-icon {
@@ -1226,80 +1263,201 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 70px;
+    padding-top: 60px;
+  }
+
+  .container {
+    padding: 0 10px 20px;
   }
 
   .header-logo {
-    height: 35px;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .option-content {
-    padding: 12px;
-  }
-
-  .option-icon {
-    min-width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-left: 5px;
+  }
+  
+  .logo h1 {
+    font-size: 1.3rem;
+    margin-left: 5px;
   }
 
-  .option-text {
-    font-size: 0.95rem;
-  }
-
-  .option-arrow {
-    width: 25px;
-    height: 25px;
-  }
-
-  .rating-star {
-    font-size: 1.8rem;
-    margin: 0 4px;
+  header {
+    padding: 8px 0;
   }
 
   .progress-container {
-    top: 50px;
+    top: 45px;
+    height: 5px;
   }
 
-  .feature {
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  p {
     font-size: 0.95rem;
+    margin-bottom: 1.2rem;
   }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.95rem;
+  .option-content {
+    padding: 10px;
   }
 
-  .offer-badge, .additional-offer-badge {
-    padding: 4px 30px;
-    font-size: 0.7rem;
-    right: -25px;
+  .option-icon {
+    min-width: 25px;
+    height: 25px;
+    margin-right: 8px;
   }
 
-  .offer-container, .additional-offer-container {
-    padding: 1.2rem;
-    margin: 1.5rem 0;
-  }
-
-  .bonus-item, .access-item {
+  .option-text {
     font-size: 0.9rem;
   }
 
-  .price-value {
-    font-size: 1rem;
+  .option-arrow {
+    width: 22px;
+    height: 22px;
   }
 
+  .rating-star {
+    font-size: 1.6rem;
+    margin: 0 3px;
+  }
+  
+  .survey-screen {
+    padding: 15px 0;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    margin: 0.8rem 0;
+  }
+  
+  .welcome-image {
+    margin-bottom: 1.3rem;
+  }
+  
+  .ready-image {
+    max-height: 230px;
+    border-radius: 8px;
+  }
+  
+  .feature {
+    font-size: 0.9rem;
+    padding: 0.2rem;
+  }
+  
+  .offer-container, 
+  .additional-offer-container {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .offer-badge, 
+  .additional-offer-badge,
+  .recommended-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+  
+  .offer-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .offer-details li {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .old-price {
+    font-size: 1rem;
+  }
+  
+  .new-price {
+    font-size: 1.3rem;
+  }
+  
   .cta-button {
     padding: 12px 16px;
     font-size: 0.95rem;
   }
-
-  .secure-badge, .help-text {
+  
+  .bonus-section, 
+  .access-section {
+    padding: 1rem 0.8rem;
+  }
+  
+  .bonus-section h4, 
+  .access-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .bonus-item,
+  .access-item {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .price-highlight {
+    padding: 1rem 0.8rem;
+  }
+  
+  .price-text {
+    font-size: 0.95rem;
+  }
+  
+  .countdown-highlight {
+    font-size: 1.1rem;
+  }
+  
+  .help-text {
     font-size: 0.8rem;
+  }
+  
+  .plan-card {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .plan-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .plan-title {
+    font-size: 1.1rem;
+  }
+  
+  .plan-feature {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .plan-button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  
+  .testimonials h4 {
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-stars {
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+  
+  .guarantee-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .guarantee-content p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1358,36 +1516,4 @@ footer {
 
 #questions-container {
   position: relative;
-}
-
-.back-button {
-  background: none;
-  border: none;
-  color: #555;
-  cursor: pointer;
-  font-size: 0.9rem;
-  padding: 8px 15px;
-  display: inline-flex;
-  align-items: center;
-  position: fixed; /* Alterado de 'absolute' para 'fixed' */
-  bottom: 20px; /* Alterado de 'top: 0' para 'bottom: 20px' */
-  left: 50%; /* Centralizado horizontalmente */
-  transform: translateX(-50%); /* Completando a centralização */
-  margin: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicionando sombra para melhor visibilidade */
-  border-radius: 20px; /* Adicionando borda arredondada */
-  background-color: #f5f5f5; /* Fundo sutil */
-  z-index: 100; /* Garantindo que fique acima de outros elementos */
-}
-
-.back-button:before {
-  content: "←";
-  margin-right: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.back-button:hover {
-  color: #333;
-  background-color: #e0e0e0; /* Alterando cor ao passar o mouse */
 }
