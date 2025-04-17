@@ -63,8 +63,27 @@ const thankYouScreen = document.getElementById('thank-you-screen');
 const startButton = document.getElementById('start-survey');
 const progressBar = document.getElementById('progress-bar');
 const restartButton = document.getElementById('restart-survey');
+const header = document.querySelector('header');
+const progressContainer = document.querySelector('.progress-container');
+const logo = document.querySelector('.logo');
 
 let currentQuestionIndex = 0;
+let lastScrollTop = 0; // Para detectar a direção do scroll
+
+// Função para controlar elementos no scroll
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 20) {
+        // Se rolou mais de 20px, esconde os elementos
+        header.style.opacity = '0';
+        progressContainer.style.opacity = '0';
+    } else {
+        // Se estiver próximo ao topo, mostra os elementos
+        header.style.opacity = '1';
+        progressContainer.style.opacity = '1';
+    }
+});
 
 // Variáveis globais
 let currentScreen = 0;
