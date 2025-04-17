@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready 2GO</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/Logotipo-branco.png" alt="Logo" class="header-logo">
+            </div>
+        </header>
+        
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        
+        <div class="survey-container">
+            <div id="welcome-screen" class="survey-screen active">
+                <div class="welcome-image">
+                    <img src="assets/Ready.jpeg" alt="Ready" class="ready-image">
+                </div>
+                <div class="content">
+                    <h2>Vamos te direcionar para a <span class="highlight-word">solução perfeita</span>!</h2>
+                    <div class="features">
+                        <div class="feature">✓ <span class="feature-bold">Rápido</span> e fácil</div>
+                        <div class="feature">✓ <span class="feature-bold">Personalizado</span> para você</div>
+                        <div class="feature">✓ <span class="feature-bold">100% gratuito</span></div>
+                    </div>
+                    <button id="start-survey" class="btn primary-btn">Começar Agora</button>
+                </div>
+                <div class="timer">
+                    <span>Leva menos de 2 minutos</span>
+                </div>
+            </div>
+            
+            <div id="questions-container" class="survey-screen">
+                <button id="back-button" class="back-button">Voltar</button>
+                <!-- As perguntas serão inseridas aqui dinamicamente -->
+            </div>
+            
+            <div id="thank-you-screen" class="survey-screen">
+                <h2>Obrigado por participar!</h2>
+                <p>Suas respostas foram registradas com sucesso.</p>
+                
+                <div id="summary-container" class="summary-container">
+                    <h3>Resumo das suas respostas:</h3>
+                    <div id="responses-summary" class="responses-summary">
+                        <!-- As respostas serão inseridas aqui dinamicamente -->
+                    </div>
+                </div>
+                
+                <div class="offer-container">
+                    <div class="offer-badge">Oferta Exclusiva</div>
+                    <h3>A <span class="highlight-word">solução perfeita</span> para você!</h3>
+                    <p>Com base nas suas respostas, preparamos uma <span class="feature-bold">oferta especial</span>.</p>
+                    
+                    <div class="bonus-section">
+                        <h4>Bônus <span class="highlight-word">inclusos hoje</span>:</h4>
+                        <div class="bonus-item">
+                            <span class="check-icon">✅</span>
+                            <span>Relatório <span class="item-bold">Geral</span></span>
+                        </div>
+                        <div class="bonus-item">
+                            <span class="check-icon">✅</span>
+                            <span>Relatório <span class="item-bold">Meta Ads</span></span>
+                        </div>
+                        <div class="bonus-item">
+                            <span class="check-icon">✅</span>
+                            <span>Relatório <span class="item-bold">Google Ads</span></span>
+                        </div>
+                        <div class="bonus-item">
+                            <span class="check-icon">✅</span>
+                            <span>Relatório <span class="item-bold">TikTok Ads</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="access-section">
+                        <h4>Acesso <span class="highlight-word">completo</span>:</h4>
+                        <div class="access-item">
+                            <span class="blue-icon">🔹</span>
+                            <span>Aulas de <span class="item-bold">Configuração</span></span>
+                        </div>
+                        <div class="access-item">
+                            <span class="blue-icon">🔹</span>
+                            <span>Aulas de <span class="item-bold">Edição</span></span>
+                        </div>
+                        <div class="access-item">
+                            <span class="shield-icon">🛡️</span>
+                            <span><span class="item-bold">Garantia</span> de Satisfação</span>
+                        </div>
+                        <div class="access-item">
+                            <span class="support-icon">👨‍💻</span>
+                            <span>Suporte <span class="item-bold">Prioritário</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="offer-details">
+                            <h4>Pacote Premium</h4>
+                            <div class="dash-reports">
+                                <span class="reports-icon">📊</span>
+                                <span>Relatórios 2GO</span>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">Oferta 2GO</div>
+                                <div class="product-discount">
+                                    <span class="old-price">R$ 147,00</span>
+                                    <span class="discount">(47% Off)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-highlight">
+                        <div class="price-text">Aproveite agora! Apenas</div>
+                        <div class="price-value">
+                            <span class="installment-highlight">12x de R$ 6,79</span> 
+                            <span class="price-separator">ou</span> 
+                            <span class="cash-price">R$ 67,90 à vista!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="limited-offer">
+                        <span>Oferta por tempo limitado! Resgate agora seu desconto:</span>
+                        <span class="countdown-highlight" id="offer-countdown">14:21</span>
+                    </div>
+                    
+                    <a href="#" id="cta-button" class="cta-button">
+                        Quero ter acesso agora! (47% Off)
+                    </a>
+                    
+                    <div class="secure-badge">
+                        <span class="lock-icon">🔒</span>
+                        <span>Compra Segura</span>
+                    </div>
+                    
+                    <div class="help-text">
+                        Não conseguiu acessar o checkout? <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" class="help-link">Clique aqui</a> ou fale conosco no Instagram
+                    </div>
+                </div>
+                
+                <!-- Nova seção de oferta adicional -->
+                <div class="additional-offer-container">
+                    <div class="additional-offer-badge">Oferta Exclusiva</div>
+                    <h3>Aproveite também outra opção para você</h3>
+                    
+                    <div class="additional-plans">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="plan-title">Plano Básico</div>
+                            </div>
+                            <div class="plan-features">
+                                <div class="plan-feature">
+                                    <span class="check-icon">✅</span>
+                                    <span>Relatório padrão</span>
+                                </div>
+                                <div class="plan-feature">
+                                    <span class="check-icon">✅</span>
+                                    <span>Suporte básico</span>
+                                </div>
+                                <div class="plan-feature disabled">
+                                    <span class="x-icon">❌</span>
+                                    <span>Acessos extras</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+                                <span class="price-value">R$ 37,90</span>
+                                <span class="price-period">por mês</span>
+                            </div>
+                            <a href="#" class="plan-button">Escolher plano</a>
+                        </div>
+                        
+                        <div class="plan-card recommended">
+                            <div class="recommended-badge">Mais popular</div>
+                            <div class="plan-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="plan-title">Plano Pro</div>
+                            </div>
+                            <div class="plan-features">
+                                <div class="plan-feature">
+                                    <span class="check-icon">✅</span>
+                                    <span>Todos os relatórios</span>
+                                </div>
+                                <div class="plan-feature">
+                                    <span class="check-icon">✅</span>
+                                    <span>Suporte prioritário</span>
+                                </div>
+                                <div class="plan-feature">
+                                    <span class="check-icon">✅</span>
+                                    <span>Acessos ilimitados</span>
+                                </div>
+                            </div>
+                            <div class="plan-price">
+                                <span class="price-value">R$ 97,90</span>
+                                <span class="price-period">por mês</span>
+                            </div>
+                            <a href="#" class="plan-button highlight">Escolher plano</a>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonials">
+                        <h4>O que nossos clientes dizem:</h4>
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/100?img=11" alt="Avatar">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-text">"Simplesmente incrível! Os relatórios me ajudaram a otimizar minhas campanhas e aumentar o ROI em mais de 45%."</p>
+                                <div class="testimonial-author">Carlos Silva, Agência MKT</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee-section">
+                        <div class="guarantee-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/6364/6364343.png" alt="Garantia" width="80">
+                        </div>
+                        <div class="guarantee-content">
+                            <h4>Garantia de 7 dias</h4>
+                            <p>Se não estiver satisfeito com nossos serviços, devolveremos 100% do seu investimento nos primeiros 7 dias.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="restart-survey" class="btn secondary-btn">Refazer o questionário</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 2GO Marketing</p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
