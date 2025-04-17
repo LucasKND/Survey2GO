@@ -398,7 +398,7 @@ textarea:focus {
   border-color: var(--primary-color);
 }
 
-back-button {
+.back-button {
   background: none;
   border: none;
   color: #777;
@@ -1122,6 +1122,181 @@ footer {
   .guarantee-icon {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+
+  .container {
+    padding: 0 15px 30px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .offer-container h3, 
+  .additional-offer-container h3,
+  .summary-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .progress-container {
+    top: 55px;
+  }
+
+  .rating-star {
+    font-size: 2rem;
+    margin: 0 5px;
+  }
+
+  .bonus-section, .access-section {
+    padding: 1rem;
+  }
+
+  .offer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .offer-details {
+    width: 100%;
+  }
+
+  .product-info {
+    flex-direction: column;
+  }
+
+  .product-discount {
+    margin-top: 0.5rem;
+  }
+
+  .price-value {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .price-separator {
+    display: none;
+  }
+
+  .cta-button {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .additional-plans {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-avatar {
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .guarantee-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .guarantee-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header-logo {
+    height: 35px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .option-content {
+    padding: 12px;
+  }
+
+  .option-icon {
+    min-width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .option-text {
+    font-size: 0.95rem;
+  }
+
+  .option-arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .rating-star {
+    font-size: 1.8rem;
+    margin: 0 4px;
+  }
+
+  .progress-container {
+    top: 50px;
+  }
+
+  .feature {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .offer-badge, .additional-offer-badge {
+    padding: 4px 30px;
+    font-size: 0.7rem;
+    right: -25px;
+  }
+
+  .offer-container, .additional-offer-container {
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .bonus-item, .access-item {
+    font-size: 0.9rem;
+  }
+
+  .price-value {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .secure-badge, .help-text {
+    font-size: 0.8rem;
   }
 }
 
